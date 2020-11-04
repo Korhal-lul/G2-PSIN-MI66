@@ -1,5 +1,6 @@
-import 'dart:html';
+import 'package:flappy_search_bar/flappy_search_bar.dart';
 
+import 'dart:html';
 import 'package:flutter/material.dart';
 
 class Navbar extends StatelessWidget {
@@ -29,65 +30,54 @@ class DesktopNavbar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: 30,
-                    height: 70,
-                  ),
-                  Image(
-                    image: AssetImage("../assets/images/icon.png"),
-                    width: 56,
-                    height: 56,
-                  ),
-                  SizedBox(
-                    width: 25,
-                  ),
-                  Text(
-                    "Intranet",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 30),
-                  ),
-                ]
-            ),
+            Row(children: <Widget>[
+              SizedBox(
+                width: 30,
+                height: 70,
+              ),
+              Image(
+                image: AssetImage("../assets/images/icon.png"),
+                width: 56,
+                height: 56,
+              ),
+              SizedBox(
+                width: 25,
+              ),
+              Text(
+                "Intranet",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 30),
+              ),
+            ]),
             Row(
               children: <Widget>[
-                Text(
-                  "Home",
-                  style: TextStyle(color: Colors.white),
-                ),
                 SizedBox(
-                  width: 30,
+                    width: 300,
+                    child: TextField(
+                      cursorColor: Colors.white,
+                      style: TextStyle(color: Colors.white, fontFamily: "RobotoRegular"),
+                      decoration: InputDecoration(hintText: 'Enter a search', hintStyle: TextStyle(color: Colors.white, fontFamily: "RobotoRegular")),
+                    )
                 ),
-                Text(
-                  "About Us",
-                  style: TextStyle(color: Colors.white),
-                ),
-                SizedBox(
-                  width: 30,
-                ),
-                Text(
-                  "Portfolio",
-                  style: TextStyle(color: Colors.white),
-                ),
-                SizedBox(
-                  width: 30,
-                ),
-                MaterialButton(
-                  color: Colors.pink,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                IconButton(
                   onPressed: () {},
-                  child: Text(
-                    "Get Started",
-                    style: TextStyle(color: Colors.white),
-                  ),
+                  icon: Icon(Icons.search),
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  width: 120,
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.person),
+                  iconSize: 40,
+                  color: Colors.white,
                 ),
                 SizedBox(width: 30)
               ],
-            )
+            ),
           ],
         ),
       ),

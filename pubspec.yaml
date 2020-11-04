@@ -18,6 +18,7 @@ environment:
 
 dependencies:
   fl_chart: ^0.12.0
+  flappy_search_bar: 1.4.1
 
   flutter:
     sdk: flutter
@@ -60,6 +61,10 @@ flutter:
       fonts:
         - asset: assets/fonts/Montserrat-Bold.ttf
         - asset: assets/fonts/Montserrat-Regular.ttf
+    - family: RobotoRegular
+      fonts:
+        - asset: fonts/Roboto-Regular.ttf
+        - asset: fonts/Roboto-Bold.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
