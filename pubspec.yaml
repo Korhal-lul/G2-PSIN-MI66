@@ -64,11 +64,12 @@ flutter:
     - family: RobotoRegular
       fonts:
         - asset: assets/fonts/Roboto-Regular.ttf
-        - asset: assets/fonts/Roboto-Bold.ttf
     - family: RobotoLight
       fonts:
         - asset: assets/fonts/Roboto-Light.ttf
-        - asset: assets/fonts/Roboto-LightItalic.ttf
+    - family: RobotoThin
+      fonts:
+        - asset: assets/fonts/Roboto-Thin.ttf
     - family: FunCity
       fonts:
         - asset: assets/fonts/FunCityLevel2Stencil.ttf

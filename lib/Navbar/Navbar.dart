@@ -35,20 +35,16 @@ class DesktopNavbar extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.07,
                 height: 70,
               ),
-              Image(
-                image: AssetImage("../assets/images/icon.png"),
-                width: 56,
-                height: 56,
-              ),
-              SizedBox(
-                width: 25,
+              IconButton(
+                icon: new Image.asset('../assets/images/icon.png'),
+                iconSize: 40,
               ),
               Text(
                 "INTRANET",
                 style: TextStyle(
                     fontFamily: "FunCity",
                     color: Colors.white,
-                    fontSize: 25),
+                    fontSize: 30),
               ),
             ]),
             Row(
@@ -58,21 +54,22 @@ class DesktopNavbar extends StatelessWidget {
                     child: TextField(
                       cursorColor: Colors.white,
                       style: TextStyle(color: Colors.white, fontFamily: "RobotoLight"),
-                      decoration: InputDecoration(hintText: 'Enter a search', hintStyle: TextStyle(color: Colors.white, fontFamily: "RobotoLight")),
+                      decoration: InputDecoration(hintText: 'Enter a search', hintStyle: TextStyle(color: Color.fromRGBO(97, 97, 97, 1.0), fontFamily: "RobotoLight")),
                     )
                 ),
                 IconButton(
                   onPressed: () {},
                   icon: Icon(Icons.search),
                   color: Colors.white,
+                  iconSize: 25,
                 ),
                 SizedBox(
                   width: 120,
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.person),
-                  iconSize: 40,
+                  icon: Icon(Icons.logout),
+                  iconSize: 30,
                   color: Colors.white,
                 ),
                 SizedBox(width: MediaQuery.of(context).size.width * 0.07,)
