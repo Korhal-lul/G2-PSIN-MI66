@@ -46,7 +46,7 @@ class DesktopNavbar extends StatelessWidget {
               Text(
                 "INTRANET",
                 style: TextStyle(
-                    fontFamily: "RobotoLight",
+                    fontFamily: "FunCity",
                     color: Colors.white,
                     fontSize: 25),
               ),
