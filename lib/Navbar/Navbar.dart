@@ -10,7 +10,7 @@ class Navbar extends StatelessWidget {
       builder: (context, constraints) {
         if (constraints.maxWidth > 1200) {
           return DesktopNavbar();
-        } else if (constraints.maxWidth > 800 && constraints.maxWidth < 1200) {
+        } else if (constraints.maxWidth > 940) {
           return DesktopNavbar();
         } else {
           return MobileNavbar();
@@ -26,13 +26,13 @@ class DesktopNavbar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 0),
       child: Container(
-        color: Colors.black,
+        color: const Color.fromRGBO(31, 31, 31, 1.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Row(children: <Widget>[
               SizedBox(
-                width: 30,
+                width: MediaQuery.of(context).size.width * 0.07,
                 height: 70,
               ),
               Image(
@@ -44,11 +44,11 @@ class DesktopNavbar extends StatelessWidget {
                 width: 25,
               ),
               Text(
-                "Intranet",
+                "INTRANET",
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                    fontFamily: "RobotoLight",
                     color: Colors.white,
-                    fontSize: 30),
+                    fontSize: 25),
               ),
             ]),
             Row(
@@ -57,8 +57,8 @@ class DesktopNavbar extends StatelessWidget {
                     width: 300,
                     child: TextField(
                       cursorColor: Colors.white,
-                      style: TextStyle(color: Colors.white, fontFamily: "RobotoRegular"),
-                      decoration: InputDecoration(hintText: 'Enter a search', hintStyle: TextStyle(color: Colors.white, fontFamily: "RobotoRegular")),
+                      style: TextStyle(color: Colors.white, fontFamily: "RobotoLight"),
+                      decoration: InputDecoration(hintText: 'Enter a search', hintStyle: TextStyle(color: Colors.white, fontFamily: "RobotoLight")),
                     )
                 ),
                 IconButton(
@@ -75,7 +75,7 @@ class DesktopNavbar extends StatelessWidget {
                   iconSize: 40,
                   color: Colors.white,
                 ),
-                SizedBox(width: 30)
+                SizedBox(width: MediaQuery.of(context).size.width * 0.07,)
               ],
             ),
           ],

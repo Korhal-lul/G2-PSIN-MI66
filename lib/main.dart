@@ -21,26 +21,17 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              colors: [
-                Color.fromRGBO(195, 20, 50, 1.0),
-                Color.fromRGBO(36, 11, 54, 1.0)
-              ]),
+          color: Color.fromRGBO(18, 18, 18, 1),
         ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              Navbar(),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 47.0, horizontal: 40.0),
-                child: LandingPage(),
-              )
-            ],
-          ),
-
+        child: Column(
+          children: <Widget>[
+            Navbar(),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 50.3, horizontal: 40.0),
+              child: LandingPage(),
+            )
+          ],
         ),
       ),
     );
