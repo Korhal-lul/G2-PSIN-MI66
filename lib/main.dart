@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Services Intranet',
       theme: ThemeData(primarySwatch: Colors.blue, fontFamily: "Montserrat"),
       home: MyHomePage(),
@@ -28,7 +29,7 @@ class MyHomePage extends StatelessWidget {
             Navbar(),
             Padding(
               padding:
-                  const EdgeInsets.symmetric(vertical: 50.3, horizontal: 67),
+              const EdgeInsets.symmetric(vertical: 50.3, horizontal: 67),
               child: LandingPage(),
             )
           ],

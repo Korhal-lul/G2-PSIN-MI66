@@ -3,6 +3,9 @@ import 'package:flutter_webpage/main.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class LandingPage extends StatelessWidget {
+  createState() => LandingPage();
+
+  CalendarController _controller = CalendarController();
 
   List<Widget> pageChildren(double width) {
     return <Widget>[
@@ -15,8 +18,8 @@ class LandingPage extends StatelessWidget {
             Card(
               color: Color.fromRGBO(192, 192, 192, 1),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
+                  borderRadius: BorderRadius.circular(5),
+                ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -56,7 +59,7 @@ class LandingPage extends StatelessWidget {
                                         Text(
                                           "Bem vindo, User",
                                           style: TextStyle(
-                                              fontFamily: "RobotoThin",
+                                              fontFamily: "RobotoRegular",
                                               fontWeight: FontWeight.bold,
                                               color: Colors.white,
                                               fontSize: 15),
@@ -77,17 +80,17 @@ class LandingPage extends StatelessWidget {
                                     ),
                                     Container(
                                         child: Row(children: <Widget>[
-                                      SizedBox(
-                                        width: 20,
-                                      ),
-                                      Text(
-                                        "A tela atual contém respectivas opções\npara melhor interação para com o\nusuário solicitante. Aproveite!",
-                                        style: TextStyle(
-                                            fontFamily: "RobotoThin",
-                                            color: Colors.white,
-                                            fontSize: 15),
-                                      ),
-                                    ]))
+                                          SizedBox(
+                                            width: 20,
+                                          ),
+                                          Text(
+                                            "A tela atual contém respectivas opções\npara melhor interação para com o\nusuário solicitante. Aproveite!",
+                                            style: TextStyle(
+                                                fontFamily: "RobotoRegular",
+                                                color: Colors.white,
+                                                fontSize: 15),
+                                          ),
+                                        ]))
                                   ],
                                 ))
                           ],
@@ -102,7 +105,7 @@ class LandingPage extends StatelessWidget {
             Card(
                 color: Color.fromRGBO(31, 31, 31, 1),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 margin: EdgeInsets.all(2),
                 child: Container(
@@ -120,7 +123,7 @@ class LandingPage extends StatelessWidget {
                           "E-mail\nCorporativo",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontFamily: "RobotoThin",
+                              fontFamily: "RobotoRegular",
                               color: Colors.white,
                               fontSize: 15),
                         )
@@ -129,7 +132,7 @@ class LandingPage extends StatelessWidget {
             Card(
                 color: Color.fromRGBO(31, 31, 31, 1),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 margin: EdgeInsets.all(2),
                 child: InkWell(
@@ -150,7 +153,7 @@ class LandingPage extends StatelessWidget {
                               "Folha de\nPagamento",
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                  fontFamily: "RobotoThin",
+                                  fontFamily: "RobotoRegular",
                                   color: Colors.white,
                                   fontSize: 15),
                             )
@@ -159,7 +162,7 @@ class LandingPage extends StatelessWidget {
             Card(
                 color: Color.fromRGBO(31, 31, 31, 1),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 margin: EdgeInsets.all(2),
                 child: Container(
@@ -177,7 +180,7 @@ class LandingPage extends StatelessWidget {
                           "Linhas de\nRamais",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontFamily: "RobotoThin",
+                              fontFamily: "RobotoRegular",
                               color: Colors.white,
                               fontSize: 15),
                         )
@@ -186,7 +189,7 @@ class LandingPage extends StatelessWidget {
             Card(
                 color: Color.fromRGBO(31, 31, 31, 1),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 margin: EdgeInsets.all(2),
                 child: Container(
@@ -204,7 +207,7 @@ class LandingPage extends StatelessWidget {
                           "Sistema de\nCartão Ponto",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontFamily: "RobotoThin",
+                              fontFamily: "RobotoRegular",
                               color: Colors.white,
                               fontSize: 15),
                         )
@@ -213,7 +216,7 @@ class LandingPage extends StatelessWidget {
             Card(
                 color: Color.fromRGBO(31, 31, 31, 1),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 margin: EdgeInsets.all(2),
                 child: Container(
@@ -231,7 +234,7 @@ class LandingPage extends StatelessWidget {
                           "Serviços\nCompartilhados",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontFamily: "RobotoThin",
+                              fontFamily: "RobotoRegular",
                               color: Colors.white,
                               fontSize: 15),
                         )
@@ -240,7 +243,7 @@ class LandingPage extends StatelessWidget {
             Card(
                 color: Color.fromRGBO(31, 31, 31, 1),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 margin: EdgeInsets.all(2),
                 child: Container(
@@ -258,7 +261,7 @@ class LandingPage extends StatelessWidget {
                           "Aniversariantes da\nSemana",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontFamily: "RobotoThin",
+                              fontFamily: "RobotoRegular",
                               color: Colors.white,
                               fontSize: 15),
                         )
@@ -269,8 +272,8 @@ class LandingPage extends StatelessWidget {
             Card(
               color: Color.fromRGBO(192, 192, 192, 1),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
+                  borderRadius: BorderRadius.circular(5),
+                ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -309,7 +312,7 @@ class LandingPage extends StatelessWidget {
                                         Text(
                                           "Bem vindo, User",
                                           style: TextStyle(
-                                              fontFamily: "RobotoThin",
+                                              fontFamily: "RobotoRegular",
                                               fontWeight: FontWeight.bold,
                                               color: Colors.white,
                                               fontSize: 15),
@@ -330,17 +333,17 @@ class LandingPage extends StatelessWidget {
                                     ),
                                     Container(
                                         child: Row(children: <Widget>[
-                                      SizedBox(
-                                        width: 20,
-                                      ),
-                                      Text(
-                                        "A tela atual contém respectivas opções\npara melhor interação para com o\nusuário solicitante. Aproveite!",
-                                        style: TextStyle(
-                                            fontFamily: "RobotoThin",
-                                            color: Colors.white,
-                                            fontSize: 15),
-                                      ),
-                                    ]))
+                                          SizedBox(
+                                            width: 20,
+                                          ),
+                                          Text(
+                                            "A tela atual contém respectivas opções\npara melhor interação para com o\nusuário solicitante. Aproveite!",
+                                            style: TextStyle(
+                                                fontFamily: "RobotoRegular",
+                                                color: Colors.white,
+                                                fontSize: 15),
+                                          ),
+                                        ]))
                                   ],
                                 ))
                           ],
@@ -355,7 +358,7 @@ class LandingPage extends StatelessWidget {
             Card(
                 color: Color.fromRGBO(31, 31, 31, 1),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 margin: EdgeInsets.all(2),
                 child: Container(
@@ -373,7 +376,7 @@ class LandingPage extends StatelessWidget {
                           "Universidade\nCorporativa",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontFamily: "RobotoThin",
+                              fontFamily: "RobotoRegular",
                               color: Colors.white,
                               fontSize: 15),
                         )
@@ -382,7 +385,7 @@ class LandingPage extends StatelessWidget {
             Card(
                 color: Color.fromRGBO(31, 31, 31, 1),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 margin: EdgeInsets.all(2),
                 child: Container(
@@ -400,7 +403,7 @@ class LandingPage extends StatelessWidget {
                           "BI \nCorporativo",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontFamily: "RobotoThin",
+                              fontFamily: "RobotoRegular",
                               color: Colors.white,
                               fontSize: 15),
                         )
@@ -409,7 +412,7 @@ class LandingPage extends StatelessWidget {
             Card(
                 color: Color.fromRGBO(31, 31, 31, 1),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 margin: EdgeInsets.all(2),
                 child: Container(
@@ -427,7 +430,7 @@ class LandingPage extends StatelessWidget {
                           "Base de\nConhecimento",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontFamily: "RobotoThin",
+                              fontFamily: "RobotoRegular",
                               color: Colors.white,
                               fontSize: 15),
                         )
@@ -436,7 +439,7 @@ class LandingPage extends StatelessWidget {
             Card(
                 color: Color.fromRGBO(31, 31, 31, 1),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 margin: EdgeInsets.all(2),
                 child: Container(
@@ -454,7 +457,7 @@ class LandingPage extends StatelessWidget {
                           "Plano de\nSaúde",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontFamily: "RobotoThin",
+                              fontFamily: "RobotoRegular",
                               color: Colors.white,
                               fontSize: 15),
                         )
@@ -463,7 +466,7 @@ class LandingPage extends StatelessWidget {
             Card(
                 color: Color.fromRGBO(31, 31, 31, 1),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 margin: EdgeInsets.all(2),
                 child: Container(
@@ -481,7 +484,7 @@ class LandingPage extends StatelessWidget {
                           "Cardápio\nSemanal",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontFamily: "RobotoThin",
+                              fontFamily: "RobotoRegular",
                               color: Colors.white,
                               fontSize: 15),
                         )
@@ -490,7 +493,7 @@ class LandingPage extends StatelessWidget {
             Card(
                 color: Color.fromRGBO(31, 31, 31, 1),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 margin: EdgeInsets.all(2),
                 child: Container(
@@ -508,7 +511,7 @@ class LandingPage extends StatelessWidget {
                           "Dados\nPessoais",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontFamily: "RobotoThin",
+                              fontFamily: "RobotoRegular",
                               color: Colors.white,
                               fontSize: 15),
                         )
@@ -519,8 +522,8 @@ class LandingPage extends StatelessWidget {
             Card(
               color: Color.fromRGBO(192, 192, 192, 1),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
+                  borderRadius: BorderRadius.circular(5),
+                ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
@@ -528,16 +531,16 @@ class LandingPage extends StatelessWidget {
                   new Flexible(
                     child: Container(
                         width: 623,
-                        height: 356,
+                        height: 360,
                         child: Row(
                           children: <Widget>[
                             Container(
                               width: 205.49,
-                              height: 356,
+                              height: 360,
                             ),
                             Container(
                               width: 417.5,
-                              height: 356,
+                              height: 360,
                               color: Color.fromRGBO(31, 31, 31, 1),
                             )
                           ],
@@ -552,12 +555,12 @@ class LandingPage extends StatelessWidget {
             Card(
                 color: Color.fromRGBO(31, 31, 31, 1),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 margin: EdgeInsets.all(2),
                 child: Container(
                     width: 732,
-                    height: 356,
+                    height: 360,
                     child: Column(
                       children: [
                         Icon(
@@ -569,7 +572,7 @@ class LandingPage extends StatelessWidget {
                           "Sistema de\n<Place Holder>",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontFamily: "RobotoThin",
+                              fontFamily: "RobotoRegular",
                               color: Colors.white,
                               fontSize: 15),
                         )
@@ -578,14 +581,41 @@ class LandingPage extends StatelessWidget {
             Card(
                 color: Color.fromRGBO(31, 31, 31, 1),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 margin: EdgeInsets.all(2),
                 child: Container(
                     width: 365,
-                    height: 356,
+                    height: 360,
                     child: Column(
                       children: [
+                        TableCalendar(
+                          calendarStyle: CalendarStyle(
+                            canEventMarkersOverflow: true,
+                            markersColor: Colors.white,
+                            weekdayStyle: TextStyle(color: Colors.white),
+                            todayColor: Colors.white54,
+                            todayStyle: TextStyle(
+                                color: Colors.redAccent,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
+                            selectedColor: Colors.red[900],
+                            outsideWeekendStyle:
+                            TextStyle(color: Colors.white60),
+                            outsideStyle: TextStyle(color: Colors.white60),
+                            weekendStyle: TextStyle(color: Colors.white),
+                            renderDaysOfWeek: false,
+                          ),
+                          headerStyle: HeaderStyle(
+                            leftChevronIcon: Icon(Icons.arrow_back_ios,
+                                size: 15, color: Colors.white),
+                            rightChevronIcon: Icon(Icons.arrow_forward_ios,
+                                size: 15, color: Colors.white),
+                            titleTextStyle: TextStyle(color: Colors.white),
+                            formatButtonVisible: false,
+                          ),
+                          calendarController: _controller,
+                        )
                       ],
                     ))),
           ]),
