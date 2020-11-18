@@ -32,7 +32,7 @@ class DesktopNavbar extends StatelessWidget {
           children: <Widget>[
             Row(children: <Widget>[
               SizedBox(
-                width: MediaQuery.of(context).size.width * 0.07,
+                width: 67,
                 height: 70,
               ),
               IconButton(
@@ -72,7 +72,7 @@ class DesktopNavbar extends StatelessWidget {
                   iconSize: 30,
                   color: Colors.white,
                 ),
-                SizedBox(width: MediaQuery.of(context).size.width * 0.07,)
+                SizedBox(width: 65,)
               ],
             ),
           ],
