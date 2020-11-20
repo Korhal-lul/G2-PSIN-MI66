@@ -1,6 +1,5 @@
-import 'package:flappy_search_bar/flappy_search_bar.dart';
-
 import 'dart:html';
+import 'package:flutter_webpage/main.dart' as main;
 import 'package:flutter/material.dart';
 
 class Navbar extends StatelessWidget {
@@ -31,20 +30,24 @@ class DesktopNavbar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Row(children: <Widget>[
-              SizedBox(
-                width: 67,
-                height: 70,
+              IconButton(
+                onPressed: () {
+                  main.openDrawer();
+                },
+                icon: Icon(Icons.menu_outlined),
+                color: Colors.white,
+                iconSize: 30,
               ),
               IconButton(
                 icon: new Image.asset('../assets/images/icon.png'),
-                iconSize: 40,
+                iconSize: 36,
               ),
               Text(
-                "INTRANET",
+                "INTRA",
                 style: TextStyle(
                     fontFamily: "FunCity",
                     color: Colors.white,
-                    fontSize: 30),
+                    fontSize: 25),
               ),
             ]),
             Row(
@@ -64,7 +67,7 @@ class DesktopNavbar extends StatelessWidget {
                   iconSize: 25,
                 ),
                 SizedBox(
-                  width: 120,
+                  width: 120,height: 65,
                 ),
                 IconButton(
                   onPressed: () {},
