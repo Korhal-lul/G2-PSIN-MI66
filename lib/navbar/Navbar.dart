@@ -67,7 +67,7 @@ class DesktopNavbar extends StatelessWidget {
                   iconSize: 25,
                 ),
                 SizedBox(
-                  width: 120,height: 65,
+                  width: 120,height: 55,
                 ),
                 IconButton(
                   onPressed: () {},
