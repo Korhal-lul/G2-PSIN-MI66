@@ -32,25 +32,167 @@ class LandingPage extends StatelessWidget {
           SizedBox(height: 12),
           Row(
             children: [
-              Column(),
+              Column(
+                children: [
+                  Card(
+                    color: Color.fromRGBO(32, 32, 32, 1),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        new Flexible(
+                          child: Container(
+                              width: 835,
+                              height: 162,
+                              child: Row(
+                                children: <Widget>[
+                                  Container(
+                                    width: 220,
+                                    child: Image.asset(
+                                        '../assets/images/DuplaDinamica.jpg'),
+                                  ),
+                                  Container(
+                                      width: 600,
+                                      child: Column(
+                                        children: <Widget>[
+                                          SizedBox(
+                                            height: 21,
+                                          ),
+                                          Container(
+                                            child: Row(children: <Widget>[
+                                              SizedBox(
+                                                width: 20,
+                                              ),
+                                              Text(
+                                                "Bem vindo, User",
+                                                style: TextStyle(
+                                                    fontFamily: "RobotoThin",
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.white,
+                                                    fontSize: 20),
+                                              ),
+                                              SizedBox(
+                                                width: 300,
+                                              ),
+                                              IconButton(
+                                                onPressed: () {},
+                                                icon: Icon(Icons.edit),
+                                                color: Colors.white,
+                                                iconSize: 20,
+                                              )
+                                            ]),
+                                          ),
+                                          SizedBox(
+                                            height: 21,
+                                          ),
+                                          Container(
+                                              child: Row(children: <Widget>[
+                                            SizedBox(
+                                              width: 20,
+                                            ),
+                                            Text(
+                                              "A tela atual contém respectivas opções para melhor interação para com o\nusuário solicitante. Aproveite!",
+                                              style: TextStyle(
+                                                  fontFamily: "RobotoThin",
+                                                  color: Colors.white,
+                                                  fontSize: 15),
+                                            ),
+                                          ]))
+                                        ],
+                                      ))
+                                ],
+                              )),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Card(
+                    color: Color.fromRGBO(32, 32, 32, 1),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        new Flexible(
+                          child: Container(
+                              width: 835,
+                              height: 162,
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(width: 30,),
+                                  Icon(
+                                    Icons.alarm,
+                                    color: Color.fromRGBO(109, 109, 109, 1.0),
+                                    size: 80,
+                                  ),
+                                  SizedBox(width: 30,),
+                                  Text(
+                                    "Relógio\nponto",
+                                    style: TextStyle(
+                                        fontFamily: "RobotoThin",
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                        fontSize: 30),
+                                  ),
+                                  Row(children: [
+                                    SizedBox(width: 30,),
+                                    Text(
+                                      "Entrada",
+                                      style: TextStyle(
+                                          fontFamily: "RobotoThin",
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                          fontSize: 20),
+                                    ),
+                                  ],)
+                                ],
+                              )),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                width: 124,
+              ),
               Container(
                 width: 332,
                 height: 336,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(5)),
+                  color: Color.fromRGBO(32, 32, 32, 1),
+                ),
                 child: TableCalendar(
                   calendarStyle: CalendarStyle(
                     canEventMarkersOverflow: true,
                     markersColor: Colors.white,
-                    weekdayStyle: TextStyle(color: Colors.white),
-                    todayColor: Colors.white54,
+                    weekdayStyle: TextStyle(
+                        color: Color.fromRGBO(250, 250, 250, 0.7),
+                        fontFamily: "RobotoRegular"),
+                    todayColor: Color.fromRGBO(1, 115, 116, 1),
                     todayStyle: TextStyle(
-                        color: Colors.redAccent,
+                        color: Colors.white,
                         fontSize: 15,
-                        fontWeight: FontWeight.bold),
-                    selectedColor: Colors.red[900],
-                    outsideWeekendStyle:
-                    TextStyle(color: Colors.white60),
-                    outsideStyle: TextStyle(color: Colors.white60),
-                    weekendStyle: TextStyle(color: Colors.white),
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "RobotoRegular"),
+                    selectedColor: Color.fromRGBO(3, 218, 197, 1),
+                    selectedStyle: TextStyle(
+                        color: Colors.black, fontFamily: "RobotoRegular"),
+                    outsideWeekendStyle: TextStyle(
+                        color: Colors.white60, fontFamily: "RobotoRegular"),
+                    outsideStyle: TextStyle(
+                        color: Colors.white38, fontFamily: "RobotoRegular"),
+                    weekendStyle: TextStyle(
+                        color: Color.fromRGBO(250, 250, 250, 0.7),
+                        fontFamily: "RobotoRegular"),
                     renderDaysOfWeek: false,
                   ),
                   headerStyle: HeaderStyle(
