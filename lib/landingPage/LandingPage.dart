@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_webpage/main.dart';
+import 'package:flutter_webpage/chart/line_chart_page.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class LandingPage extends StatelessWidget {
@@ -9,7 +9,19 @@ class LandingPage extends StatelessWidget {
 
   List<Widget> pageChildren(double width) {
     return <Widget>[
-
+      Column(
+        children: [
+          Row(
+            children: [
+              SizedBox(
+                width: 1324,
+                height: 534,
+                child: LineChart1(),
+              )
+            ],
+          )
+        ],
+      )
     ];
   }
 
