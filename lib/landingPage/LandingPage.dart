@@ -126,13 +126,17 @@ class LandingPage extends StatelessWidget {
                               height: 162,
                               child: Row(
                                 children: <Widget>[
-                                  SizedBox(width: 30,),
+                                  SizedBox(
+                                    width: 30,
+                                  ),
                                   Icon(
                                     Icons.alarm,
-                                    color: Color.fromRGBO(109, 109, 109, 1.0),
+                                    color: Color.fromRGBO(250, 250, 250, 1.0),
                                     size: 80,
                                   ),
-                                  SizedBox(width: 30,),
+                                  SizedBox(
+                                    width: 30,
+                                  ),
                                   Text(
                                     "Relógio\nponto",
                                     style: TextStyle(
@@ -141,17 +145,62 @@ class LandingPage extends StatelessWidget {
                                         color: Colors.white,
                                         fontSize: 30),
                                   ),
-                                  Row(children: [
-                                    SizedBox(width: 30,),
-                                    Text(
-                                      "Entrada",
-                                      style: TextStyle(
-                                          fontFamily: "RobotoThin",
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white,
-                                          fontSize: 20),
-                                    ),
-                                  ],)
+                                  SizedBox(
+                                    width: 150,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "Entrada",
+                                        style: TextStyle(
+                                            fontFamily: "RobotoThin",
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                            fontSize: 20),
+                                      ),
+                                      SizedBox(
+                                        width: 30,
+                                      ),
+                                      Text(
+                                        "7:30",
+                                        style: TextStyle(
+                                            fontFamily: "RobotoThin",
+                                            color: Colors.white,
+                                            fontSize: 70),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    width: 100,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "Saída",
+                                        style: TextStyle(
+                                            fontFamily: "RobotoThin",
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                            fontSize: 20),
+                                      ),
+                                      SizedBox(
+                                        width: 30,
+                                      ),
+                                      Text(
+                                        "16:30",
+                                        style: TextStyle(
+                                            fontFamily: "RobotoThin",
+                                            color: Colors.white,
+                                            fontSize: 70),
+                                      ),
+                                    ],
+                                  )
                                 ],
                               )),
                         ),
