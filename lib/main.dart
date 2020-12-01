@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_webpage/LandingPage/LandingPage.dart';
-import 'package:flutter_webpage/Navbar/NavDrawer.dart';
-import 'package:flutter_webpage/Navbar/Navbar.dart';
+import 'package:flutter_webpage/landingPage/LandingPage.dart';
+import 'package:flutter_webpage/navbar/NavDrawer.dart';
+import 'package:flutter_webpage/navbar/Navbar.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
 final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
@@ -11,6 +12,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      builder: (context, widget) => ResponsiveWrapper.builder(
+          BouncingScrollWrapper.builder(context, widget),
+          maxWidth: 1920,
+          minWidth: 720,
+          defaultScale: true,
+          breakpoints: [
+            ResponsiveBreakpoint.resize(450, name: MOBILE),
+            ResponsiveBreakpoint.autoScale(800, name: TABLET),
+            ResponsiveBreakpoint.autoScale(1000, name: TABLET),
+            ResponsiveBreakpoint.resize(1100, name: DESKTOP),
+            // ResponsiveBreakpoint.resize(1750, name: DESKTOP),
+          ],
+          background: Container(color: Color(0xFFF5F5F5))),
       debugShowCheckedModeBanner: false,
       title: 'Services Intranet',
       theme: ThemeData(primarySwatch: Colors.blue, fontFamily: "Montserrat"),
@@ -20,13 +34,12 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      body: Container(
+      body: SingleChildScrollView(
+          child: Container(
         decoration: BoxDecoration(
           color: Color.fromRGBO(18, 18, 18, 1),
         ),
@@ -34,19 +47,17 @@ class MyHomePage extends StatelessWidget {
           children: <Widget>[
             Navbar(),
             Padding(
-              padding:
-              const EdgeInsets.symmetric(vertical: 24),
+              padding: EdgeInsets.symmetric(vertical:10, horizontal: 5 ),
               child: LandingPage(),
             )
           ],
         ),
-      ),
+      )),
       drawer: NavDrawer(),
     );
   }
 }
 
-void openDrawer(){
+void openDrawer() {
   _scaffoldKey.currentState.openDrawer();
 }
-

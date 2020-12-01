@@ -8,7 +8,7 @@ class NavDrawer extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
           Container(
-            height: 969.0,
+            height: MediaQuery.of(context).size.height,
             width: 260,
             color: const Color.fromRGBO(31, 31, 31, 1.0),
             child: Column(
