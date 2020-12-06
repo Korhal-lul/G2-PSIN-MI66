@@ -7,21 +7,17 @@ class WeeklyMenuPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child: Container(
-      width: 500,
-      height: 500,
+      width: 1910,
+      height: 850,
       padding: new EdgeInsets.all(10.0),
       child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(5.0),
-        ),
-        color: Colors.red,
+        color: Color.fromRGBO(18, 18, 18, 1),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            const ListTile(
-              leading: Image(
-                image: AssetImage('images/DuplaDinamica.jpg'),
-              ),
+            Container(
+              width: 1279,
+              child: Image.asset('../assets/images/Menu.png'),
             ),
           ],
         ),

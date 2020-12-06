@@ -218,7 +218,10 @@ class NavDrawer extends StatelessWidget {
                 width: 15,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, "/weeklyMenu");
+                },
                 icon: Icon(Icons.restaurant_menu),
                 color: Color.fromRGBO(109, 109, 109, 1.0),
                 iconSize: 28,
