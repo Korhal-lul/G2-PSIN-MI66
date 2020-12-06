@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_webpage/landingPage/CorporativeEmail.dart';
 import 'package:flutter_webpage/landingPage/LandingPage.dart';
+import 'package:flutter_webpage/landingPage/WeeklyMenu.dart';
 import 'package:flutter_webpage/navbar/NavDrawer.dart';
 import 'package:flutter_webpage/navbar/Navbar.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => MyHomePage(),
         '/corporativeEmail': (context) => CorporativeEmail(),
+        '/weeklyMenu': (context) => WeeklyMenu(),
       },
     );
   }
@@ -71,6 +73,26 @@ class CorporativeEmail extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                 child: CorporativeEmailPage(),
+              )
+            ],
+          ),
+        ));
+  }
+}
+
+class WeeklyMenu extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        drawer: NavDrawer(),
+        backgroundColor: Color.fromRGBO(18, 18, 18, 1),
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Navbar(),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                child: WeeklyMenuPage(),
               )
             ],
           ),
