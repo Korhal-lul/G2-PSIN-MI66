@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_webpage/landingPage/CorporativeEmail.dart';
 import 'package:flutter_webpage/landingPage/LandingPage.dart';
 import 'package:flutter_webpage/navbar/NavDrawer.dart';
 import 'package:flutter_webpage/navbar/Navbar.dart';
@@ -18,9 +19,9 @@ class MyApp extends StatelessWidget {
           minWidth: 720,
           defaultScale: true,
           breakpoints: [
-            ResponsiveBreakpoint.resize(450, name: MOBILE),
+            ResponsiveBreakpoint.autoScale(600, name: MOBILE),
+            ResponsiveBreakpoint.resize(720, name: MOBILE),
             ResponsiveBreakpoint.autoScale(800, name: TABLET),
-            ResponsiveBreakpoint.autoScale(1000, name: TABLET),
             ResponsiveBreakpoint.resize(1100, name: DESKTOP),
             // ResponsiveBreakpoint.resize(1750, name: DESKTOP),
           ],
@@ -28,7 +29,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Services Intranet',
       theme: ThemeData(primarySwatch: Colors.blue, fontFamily: "Montserrat"),
-      home: MyHomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => MyHomePage(),
+        '/corporativeEmail': (context) => CorporativeEmail(),
+      },
     );
   }
 }
@@ -37,27 +42,38 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _scaffoldKey,
-      body: SingleChildScrollView(
-          child: Container(
-        decoration: BoxDecoration(
-          color: Color.fromRGBO(18, 18, 18, 1),
-        ),
-        child: Column(
-          children: <Widget>[
-            Navbar(),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical:10, horizontal: 5 ),
-              child: LandingPage(),
-            )
-          ],
-        ),
-      )),
-      drawer: NavDrawer(),
-    );
+        drawer: NavDrawer(),
+        backgroundColor: Color.fromRGBO(18, 18, 18, 1),
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Navbar(),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                child: LandingPage(),
+              )
+            ],
+          ),
+        ));
   }
 }
 
-void openDrawer() {
-  _scaffoldKey.currentState.openDrawer();
+class CorporativeEmail extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        drawer: NavDrawer(),
+        backgroundColor: Color.fromRGBO(18, 18, 18, 1),
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Navbar(),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                child: CorporativeEmailPage(),
+              )
+            ],
+          ),
+        ));
+  }
 }

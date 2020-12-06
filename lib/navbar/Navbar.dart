@@ -32,22 +32,24 @@ class DesktopNavbar extends StatelessWidget {
             Row(children: <Widget>[
               IconButton(
                 onPressed: () {
-                  main.openDrawer();
+                  Scaffold.of(context).openDrawer();
                 },
                 icon: Icon(Icons.menu_outlined),
                 color: Colors.white,
                 iconSize: 30,
               ),
               IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, "/");
+                },
                 icon: new Image.asset('../assets/images/icon.png'),
                 iconSize: 36,
               ),
               Text(
                 "INTRA",
                 style: TextStyle(
-                    fontFamily: "FunCity",
-                    color: Colors.white,
-                    fontSize: 25),
+                    fontFamily: "FunCity", color: Colors.white, fontSize: 25),
               ),
             ]),
             Row(
@@ -56,10 +58,14 @@ class DesktopNavbar extends StatelessWidget {
                     width: 300,
                     child: TextField(
                       cursorColor: Colors.white,
-                      style: TextStyle(color: Colors.white, fontFamily: "RobotoLight"),
-                      decoration: InputDecoration(hintText: 'Enter a search', hintStyle: TextStyle(color: Color.fromRGBO(97, 97, 97, 1.0), fontFamily: "RobotoLight")),
-                    )
-                ),
+                      style: TextStyle(
+                          color: Colors.white, fontFamily: "RobotoLight"),
+                      decoration: InputDecoration(
+                          hintText: 'Enter a search',
+                          hintStyle: TextStyle(
+                              color: Color.fromRGBO(97, 97, 97, 1.0),
+                              fontFamily: "RobotoLight")),
+                    )),
                 IconButton(
                   onPressed: () {},
                   icon: Icon(Icons.search),
@@ -67,7 +73,8 @@ class DesktopNavbar extends StatelessWidget {
                   iconSize: 25,
                 ),
                 SizedBox(
-                  width: 120,height: 55,
+                  width: 120,
+                  height: 55,
                 ),
                 IconButton(
                   onPressed: () {},
@@ -75,7 +82,9 @@ class DesktopNavbar extends StatelessWidget {
                   iconSize: 30,
                   color: Colors.white,
                 ),
-                SizedBox(width: 65,)
+                SizedBox(
+                  width: 65,
+                )
               ],
             ),
           ],
@@ -98,13 +107,15 @@ class MobileNavbar extends StatelessWidget {
             Row(children: <Widget>[
               IconButton(
                 onPressed: () {
-                  main.openDrawer();
+                  Scaffold.of(context).openDrawer();
                 },
                 icon: Icon(Icons.menu_outlined),
                 color: Colors.white,
                 iconSize: 30,
               ),
-              SizedBox(width: 100,),
+              SizedBox(
+                width: 100,
+              ),
               IconButton(
                 icon: new Image.asset('../assets/images/icon.png'),
                 iconSize: 36,
@@ -112,14 +123,11 @@ class MobileNavbar extends StatelessWidget {
               Text(
                 "INTRA",
                 style: TextStyle(
-                    fontFamily: "FunCity",
-                    color: Colors.white,
-                    fontSize: 25),
+                    fontFamily: "FunCity", color: Colors.white, fontSize: 25),
               ),
             ]),
             Row(
               children: <Widget>[
-
                 IconButton(
                   onPressed: () {},
                   icon: Icon(Icons.search),

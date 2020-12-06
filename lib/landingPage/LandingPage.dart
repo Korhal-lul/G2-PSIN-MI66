@@ -35,6 +35,7 @@ class LandingPage extends StatelessWidget {
           ),
           SizedBox(height: 12),
           (width > 1200) ? rowDisplay(width) : columnDisplay(width),
+          SizedBox(height: 20),
         ],
       )
     ];
@@ -55,7 +56,7 @@ class LandingPage extends StatelessWidget {
                 children: <Widget>[
                   new Flexible(
                       child: Container(
-                    width: 793,
+                        width: 813,
                     height: 162,
                     child: AspectRatio(
                         aspectRatio: 1.23,
@@ -67,7 +68,7 @@ class LandingPage extends StatelessWidget {
                                   '../assets/images/DuplaDinamica.jpg'),
                             ),
                             Container(
-                                width: 600,
+                                width: 593,
                                 child: Column(
                                   children: <Widget>[
                                     SizedBox(
@@ -130,7 +131,7 @@ class LandingPage extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   Container(
-                      width: 793,
+                      width: 813,
                       height: 162,
                       child: Row(
                         children: <Widget>[
@@ -212,7 +213,7 @@ class LandingPage extends StatelessWidget {
           ],
         ),
         Container(
-          width: 400,
+          width: 386,
           height: 332,
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(5)),
@@ -275,7 +276,7 @@ class LandingPage extends StatelessWidget {
                 children: <Widget>[
                   new Flexible(
                       child: Container(
-                    width: 793,
+                        width: 863,
                     height: 150,
                     child: AspectRatio(
                         aspectRatio: 1.23,
@@ -287,7 +288,7 @@ class LandingPage extends StatelessWidget {
                                   '../assets/images/DuplaDinamica.jpg'),
                             ),
                             Container(
-                                width: 300,
+                                width: 282,
                                 child: Column(
                                   children: <Widget>[
                                     SizedBox(
@@ -304,7 +305,7 @@ class LandingPage extends StatelessWidget {
                                               fontFamily: "RobotoThin",
                                               fontWeight: FontWeight.bold,
                                               color: Colors.white,
-                                              fontSize: 20),
+                                              fontSize: 26),
                                         ),
                                         IconButton(
                                           onPressed: () {},
@@ -325,11 +326,11 @@ class LandingPage extends StatelessWidget {
                                       Text(
                                         (width > 660)
                                             ? "A tela atual contém respectivas opções para melhor interação para com o\nusuário solicitante. Aproveite!"
-                                            : "A tela atual contém respectivas\nopções para melhor interação\npara com o usuário solicitante.\nAproveite!",
+                                            : "A tela atual contém respectivas opções para\n melhor interação para com o usuário\n solicitante.Aproveite!",
                                         style: TextStyle(
-                                            fontFamily: "RobotoThin",
+                                            fontFamily: "RobotoRegular",
                                             color: Colors.white,
-                                            fontSize: 12),
+                                            fontSize: 16),
                                       ),
                                     ]))
                                   ],
@@ -352,7 +353,7 @@ class LandingPage extends StatelessWidget {
                 children: <Widget>[
                   new Flexible(
                     child: Container(
-                        width: 793,
+                        width: 863,
                         height: 162,
                         child: Row(
                           children: <Widget>[
@@ -441,7 +442,7 @@ class LandingPage extends StatelessWidget {
           width: 124,
         ),
         Container(
-          width: 332,
+          width: 386,
           height: 332,
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(5)),
@@ -491,7 +492,7 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth > 1600) {
+        if (constraints.maxWidth > 1200) {
           return Row(
             children: pageChildren(constraints.biggest.width),
           );
