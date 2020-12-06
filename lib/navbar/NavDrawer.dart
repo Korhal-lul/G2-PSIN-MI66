@@ -74,7 +74,10 @@ class NavDrawer extends StatelessWidget {
                 width: 15,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, "/FolhaDePagamento");
+                },
                 icon: Icon(Icons.request_quote),
                 color: Color.fromRGBO(109, 109, 109, 1.0),
                 iconSize: 28,
@@ -269,7 +272,9 @@ class NavDrawer extends StatelessWidget {
                 width: 15,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, "/Aniversariantes");},
                 icon: Icon(Icons.cake),
                 color: Color.fromRGBO(109, 109, 109, 1.0),
                 iconSize: 28,

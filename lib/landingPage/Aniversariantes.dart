@@ -16,7 +16,7 @@ List nameList = [
   "Larry Dickson"
 ];
 
-class CorporativeEmailPage extends StatelessWidget {
+class AniversariantesPage extends StatelessWidget {
   List<Widget> pageChildren(double width) {
     return <Widget>[
       Container(
@@ -30,54 +30,40 @@ class CorporativeEmailPage extends StatelessWidget {
               mainAxisAlignment: (width > 720)
                   ? MainAxisAlignment.spaceBetween
                   : MainAxisAlignment.start,
-              children: [
-                FlatButton(
-                  child: Text(
-                    'Criar Novo',
+              children: [ Text(
+                    'Dezembro',
                     style: TextStyle(
                         fontFamily: "RobotoRegular",
                         color: Colors.white,
-                        fontSize: 20),
+                        fontSize: 30),
                   ),
-                  color: Colors.blueAccent,
-                  textColor: Colors.white,
-                  onPressed: () {},
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                SizedBox(
-                    width: 300,
-                    child: TextField(
-                      cursorColor: Colors.white,
-                      style: TextStyle(
-                          color: Colors.white, fontFamily: "RobotoLight"),
-                      decoration: InputDecoration(
-                          enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromRGBO(197, 197, 197, 1.0)),
-                          ),
-                          hintText: 'Pesquisar',
-                          hintStyle: TextStyle(
-                              color: Color.fromRGBO(197, 197, 197, 1.0),
-                              fontFamily: "RobotoLight")),
-                    )),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.search),
-                  color: Colors.white,
-                  iconSize: 25,
-                )
               ],
             ),
-            Container(
-                width: 1000,
-                child: ListView.builder(
-                  scrollDirection: Axis.vertical,
-                  shrinkWrap: true,
-                  itemBuilder: _itemBuilder,
-                  itemCount: 12,
-                ))
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  color: Color.fromRGBO(29, 29, 29, 1),
+                    width: 500,
+                    child: ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      shrinkWrap: true,
+                      itemBuilder: _itemBuilder,
+                      itemCount: 12,
+                    )),
+                Container(
+                    color: Color.fromRGBO(29, 29, 29, 1),
+                    width: 300,
+                    child: ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      shrinkWrap: true,
+                      itemBuilder: _itemBuilder,
+                      itemCount: 12,
+                    ))
+              ],
+            )
+
           ],
         ),
       )
@@ -115,22 +101,18 @@ class CorporativeEmailPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  nameList[random.nextInt(nameList.length - 1)] +
-                      ", " +
-                      nameList[random.nextInt(nameList.length - 1)] +
-                      " e " +
-                      nameList[random.nextInt(nameList.length - 1)],
+                  nameList[random.nextInt(nameList.length - 1)],
                   style: TextStyle(
                       fontFamily: "RobotoRegular",
                       color: Colors.white,
-                      fontSize: 20),
+                      fontSize: 32),
                 ),
                 Text(
-                  lipsum.createSentence(sentenceLength: 10),
+                  random.nextInt(31).toString() + "/12",
                   style: TextStyle(
                       fontFamily: "RobotoRegular",
                       color: Color.fromRGBO(197, 197, 197, 1.0),
-                      fontSize: 12),
+                      fontSize: 20),
                 ),
               ],
             ),
