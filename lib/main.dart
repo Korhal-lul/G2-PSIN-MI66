@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => MyHomePage(),
         '/corporativeEmail': (context) => CorporativeEmail(),
         '/weeklyMenu': (context) => WeeklyMenu(),
-        '/FolhaDePagamento': (context) => _FolhaDePagamento(),
+        '/FolhaDePagamento': (context) => FolhaDePagamento(),
         '/Aniversariantes': (context) => Aniversariantes(),
       },
     );
@@ -104,7 +104,7 @@ class WeeklyMenu extends StatelessWidget {
   }
 }
 
-class _FolhaDePagamento extends StatelessWidget {
+class FolhaDePagamento extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -116,7 +116,7 @@ class _FolhaDePagamento extends StatelessWidget {
               Navbar(),
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
-                child: FolhaDePagamento(),
+                child: FolhaDePagamentoPage(),
               )
             ],
           ),
