@@ -1,3 +1,25 @@
+/*
+ * SENAI / CENTROWEG
+ * AIPSIN 2019/1
+ * MI-66
+ * Autor(es): Victor Hugo Moresco
+ *
+ * Data: 18/11/2020
+ *
+ * Classe responsavel pela barra de navegação superior encontrada em todas as paginas, diferindo apenas na resolução
+ * Organizado em uma grande linha na parte superior ele dispões todos os elementos na linha(row)
+ * para fins de navegação, como abrir o drawer e ir a para a página inicial.
+ *===============================================================
+ * Documentação da Classe
+ *
+ *  Data: 12/12/2020
+ *  Responsável: Victor Hugo Moresco
+ *
+ * ================================================================
+ * Imports
+ * ================================================================
+ */
+
 import 'dart:html';
 import 'package:flutter_webpage/main.dart' as main;
 import 'package:flutter/material.dart';
@@ -7,9 +29,8 @@ class Navbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
+        //if que determina qual mostrar
         if (constraints.maxWidth > 1200) {
-          return DesktopNavbar();
-        } else if (constraints.maxWidth > 940) {
           return DesktopNavbar();
         } else {
           return MobileNavbar();
@@ -18,7 +39,7 @@ class Navbar extends StatelessWidget {
     );
   }
 }
-
+//Navbar para versão desktop
 class DesktopNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -94,6 +115,7 @@ class DesktopNavbar extends StatelessWidget {
   }
 }
 
+//Navbar para versão mobile
 class MobileNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

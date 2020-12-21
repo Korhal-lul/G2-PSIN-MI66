@@ -1,3 +1,22 @@
+/*
+ * SENAI / CENTROWEG
+ * AIPSIN 2019/1
+ * MI-66
+ * Autor(es): Gabriel Da Costa
+ *
+ * Data: 18/11/2020
+ *
+ * Classe responsavel por mostrar o cardápio sendo apenas um mockup com uma imagem do cardápio
+ *===============================================================
+ * Documentação da Classe
+ *
+ *  Data: 21/12/2020
+ *  Responsável: Victor Hugo Moresco
+ *
+ * ================================================================
+ * Imports
+ * ================================================================
+ */
 import 'package:flutter/material.dart';
 
 class WeeklyMenuPage extends StatelessWidget {

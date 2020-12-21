@@ -1,3 +1,23 @@
+/*
+ * SENAI / CENTROWEG
+ * AIPSIN 2019/1
+ * MI-66
+ * Autor(es): Victor Hugo Moresco
+ *
+ * Data: 20/11/2020
+ *
+ * Classe que mostra as data de abuversário, construido como mockup e tem dados estáticos com nomes aleatórios
+ *
+ *===============================================================
+ * Documentação da Classe
+ *
+ *  Data: 21/12/2020
+ *  Responsável: Victor Hugo Moresco
+ *
+ * ================================================================
+ * Imports
+ * ================================================================
+ */
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -108,7 +128,7 @@ class AniversariantesPage extends StatelessWidget {
                       fontSize: 32),
                 ),
                 Text(
-                  random.nextInt(31).toString() + "/12",
+                  (random.nextInt(30) + 1).toString() + "/12",
                   style: TextStyle(
                       fontFamily: "RobotoRegular",
                       color: Color.fromRGBO(197, 197, 197, 1.0),

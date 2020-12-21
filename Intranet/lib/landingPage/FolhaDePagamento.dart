@@ -1,3 +1,24 @@
+/*
+ * SENAI / CENTROWEG
+ * AIPSIN 2019/1
+ * MI-66
+ * Autor(es): Victor Hugo Moresco
+ *
+ * Data: 12/11/2020
+ *
+ * Classe que mostra a folha de pagamento, que é uma tabela mockup
+ *
+ *===============================================================
+ * Documentação da Classe
+ *
+ *  Data: 21/12/2020
+ *  Responsável: Victor Hugo Moresco
+ *
+ * ================================================================
+ * Imports
+ * ================================================================
+ */
+
 import 'dart:math';
 
 import 'package:flutter/material.dart';

@@ -1,3 +1,25 @@
+/*
+ * SENAI / CENTROWEG
+ * AIPSIN 2019/1
+ * MI-66
+ * Autor(es): Victor Hugo Moresco e Gabriel Da Costa
+ *
+ * Data: 12/11/2020
+ *
+ * Classe da pagina inicial, onde mostra o gráfico e o calendário
+ * Possui dois displays para mobile e desktop
+ *
+ *===============================================================
+ * Documentação da Classe
+ *
+ *  Data: 21/12/2020
+ *  Responsável: Victor Hugo Moresco
+ *
+ * ================================================================
+ * Imports
+ * ================================================================
+ */
+
 import 'package:flutter/material.dart';
 import 'package:flutter_webpage/chart/line_chart_page.dart';
 import 'package:table_calendar/table_calendar.dart';
