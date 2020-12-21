@@ -1,13 +1,39 @@
+/*
+ * SENAI / CENTROWEG
+ * AIPSIN 2019/1
+ * MI-66
+ * Autor(es): Victor Hugo Moresco
+ *
+ * Data: 17/11/2020
+ *
+ * Classe responsavel pelo drawer lateral esquerdo encontrado em todas as páginas
+ *
+ * O drawer funcionado de maneira similar ao drawer do youtube
+ * sendo uma organizado verticalmente, deixando horizontalmente 2 ou 3 elementos numa linha que constitui a coluna
+ * então o primeiro elemento da coluna sendo uma linha com a barra que chama e remove o drawer com o ícone do serviço e o nome logo ao lado
+ * repetindo o padrão de linha para cada elemento com um ícone e nome da pagina
+ * ao clicar no ícone muda a rota da página
+ *===============================================================
+ * Documentação da Classe
+ *
+ *  Data: 11/12/2020
+ *  Responsável: Victor Hugo Moresco
+ *
+ * ================================================================
+ * Imports
+ * ================================================================
+ */
 import 'package:flutter/material.dart';
 import 'package:flutter_webpage/main.dart';
-
 class NavDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Drawer(
         child: ListView(children: <Widget>[
       Container(
+        //Altura do drawer é definada pelo tamanho da tela
         height: MediaQuery.of(context).size.height,
+        //A largura é estática
         width: 260,
         color: const Color.fromRGBO(31, 31, 31, 1.0),
         child: Column(
@@ -248,7 +274,10 @@ class NavDrawer extends StatelessWidget {
                 width: 15,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, "/SharedServices");
+                },
                 icon: Icon(Icons.miscellaneous_services),
                 color: Color.fromRGBO(109, 109, 109, 1.0),
                 iconSize: 28,
@@ -274,7 +303,8 @@ class NavDrawer extends StatelessWidget {
               IconButton(
                 onPressed: () {
                   Navigator.pop(context);
-                  Navigator.pushNamed(context, "/Aniversariantes");},
+                  Navigator.pushNamed(context, "/Aniversariantes");
+                },
                 icon: Icon(Icons.cake),
                 color: Color.fromRGBO(109, 109, 109, 1.0),
                 iconSize: 28,

@@ -1,8 +1,29 @@
+/*
+ * SENAI / CENTROWEG
+ * AIPSIN 2019/1
+ * MI-66
+ * Autor(es): Victor Hugo Moresco
+ *
+ * Data: 16/11/2020
+ *
+ * Classe que mostra os emails auto gerados aleatoriamente.
+ *
+ *===============================================================
+ * Documentação da Classe
+ *
+ *  Data: 21/12/2020
+ *  Responsável: Victor Hugo Moresco
+ *
+ * ================================================================
+ * Imports
+ * ================================================================
+ */
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:lipsum/lipsum.dart' as lipsum;
 
+//Lista de nomes
 List nameList = [
   "Conall Mullen",
   "Ema Cooke",
@@ -96,6 +117,8 @@ class CorporativeEmailPage extends StatelessWidget {
       },
     );
   }
+
+  //Constroi o item que vai ser mostrado
 
   Widget _itemBuilder(BuildContext context, int index) {
     Random random = new Random();

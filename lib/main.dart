@@ -1,8 +1,29 @@
+/*
+ * SENAI / CENTROWEG
+ * AIPSIN 2019/1
+ * MI-66
+ * Autor(es): Victor Hugo Moresco
+ *
+ * Data: 11/11/2020
+ *
+ * Classe principal do programa, responsável por iniciar as telas iniciais e compor a os elementos da tela, escolhendo entre as landing pages dependendo da rout atual
+ *
+ *===============================================================
+ * Documentação da Classe
+ *
+ *  Data: 18/12/2020
+ *  Responsável: Victor Hugo Moresco
+ *
+ * ================================================================
+ * Imports
+ * ================================================================
+ */
 import 'package:flutter/material.dart';
 import 'package:flutter_webpage/landingPage/Aniversariantes.dart';
 import 'package:flutter_webpage/landingPage/CorporativeEmail.dart';
 import 'package:flutter_webpage/landingPage/FolhaDePagamento.dart';
 import 'package:flutter_webpage/landingPage/LandingPage.dart';
+import 'package:flutter_webpage/landingPage/SharedServices.dart';
 import 'package:flutter_webpage/landingPage/WeeklyMenu.dart';
 import 'package:flutter_webpage/navbar/NavDrawer.dart';
 import 'package:flutter_webpage/navbar/Navbar.dart';
@@ -32,23 +53,32 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Services Intranet',
       theme: ThemeData(primarySwatch: Colors.blue, fontFamily: "Montserrat"),
+      //Rota inicial quando o programado é executado
       initialRoute: '/',
+      //Define as rotas do aplicativo, chama a classe para o contexto
       routes: {
         '/': (context) => MyHomePage(),
         '/corporativeEmail': (context) => CorporativeEmail(),
         '/weeklyMenu': (context) => WeeklyMenu(),
         '/FolhaDePagamento': (context) => FolhaDePagamento(),
         '/Aniversariantes': (context) => Aniversariantes(),
+        '/SharedServices': (context) => SharedServices(),
       },
     );
   }
 }
 
+/*================================================================================
+* As classes a seguir são praticamente iguais mudando apenas a child chamando a classe respectiva
+* sendo assim a documentação da primeira classe servira de exemplo paras as demais
+*/
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //Drawer sendo a classe da NavDrawer
         drawer: NavDrawer(),
+        //Cor padrão
         backgroundColor: Color.fromRGBO(18, 18, 18, 1),
         body: SingleChildScrollView(
           child: Column(
@@ -56,6 +86,7 @@ class MyHomePage extends StatelessWidget {
               Navbar(),
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                //A diferença entre as classes é esta child
                 child: LandingPage(),
               )
             ],
@@ -137,6 +168,25 @@ class Aniversariantes extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                 child: AniversariantesPage(),
+              )
+            ],
+          ),
+        ));
+  }
+}
+class SharedServices extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        drawer: NavDrawer(),
+        backgroundColor: Color.fromRGBO(18, 18, 18, 1),
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Navbar(),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                child: SharedServicesPage(),
               )
             ],
           ),
