@@ -25,6 +25,7 @@
  */
 import 'package:flutter/material.dart';
 import 'package:flutter_webpage/main.dart';
+
 class NavDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -181,7 +182,10 @@ class NavDrawer extends StatelessWidget {
                 width: 15,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, "/biCorporative");
+                },
                 icon: Icon(Icons.analytics),
                 color: Color.fromRGBO(109, 109, 109, 1.0),
                 iconSize: 28,
