@@ -29,6 +29,10 @@ import 'package:flutter_webpage/navbar/NavDrawer.dart';
 import 'package:flutter_webpage/navbar/Navbar.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
+import 'landingPage/BaseConhecimento.dart';
+import 'landingPage/CorporativeUniversity.dart';
+import 'landingPage/ListaRamais.dart';
+
 final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
 void main() => runApp(MyApp());
@@ -59,6 +63,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => MyHomePage(),
         '/corporativeEmail': (context) => CorporativeEmail(),
+        '/corporativeUniversity': (context) => CorporativeUniversity(),
+        '/baseConhecimento': (context) => BaseConhecimento(),
+        '/listaRamais': (context) => ListaRamais(),
         '/weeklyMenu': (context) => WeeklyMenu(),
         '/FolhaDePagamento': (context) => FolhaDePagamento(),
         '/Aniversariantes': (context) => Aniversariantes(),
@@ -128,6 +135,69 @@ class WeeklyMenu extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                 child: WeeklyMenuPage(),
+              )
+            ],
+          ),
+        ));
+  }
+}
+
+class CorporativeUniversity extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        drawer: NavDrawer(),
+        backgroundColor: Color.fromRGBO(18, 18, 18, 1),
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Navbar(),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                child: CorporativeUniversityPage(),
+              )
+            ],
+          ),
+        ));
+  }
+}
+
+class ListaRamais extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        drawer: NavDrawer(),
+        backgroundColor: Color.fromRGBO(18, 18, 18, 1),
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Navbar(),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                child: ListaRamaisPage(),
+              )
+            ],
+          ),
+        ));
+  }
+}
+
+class CListaRamaisPage {
+}
+
+class BaseConhecimento extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        drawer: NavDrawer(),
+        backgroundColor: Color.fromRGBO(18, 18, 18, 1),
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Navbar(),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                child: BaseConhecimentoPage(),
               )
             ],
           ),

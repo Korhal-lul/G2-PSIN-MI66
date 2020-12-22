@@ -127,7 +127,10 @@ class NavDrawer extends StatelessWidget {
                 width: 15,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, "/listaRamais");
+                },
                 icon: Icon(Icons.phone),
                 color: Color.fromRGBO(109, 109, 109, 1.0),
                 iconSize: 28,
@@ -151,7 +154,10 @@ class NavDrawer extends StatelessWidget {
                 width: 15,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, "/corporativeUniversity");
+                },
                 icon: Icon(Icons.school),
                 color: Color.fromRGBO(109, 109, 109, 1.0),
                 iconSize: 28,
@@ -199,7 +205,10 @@ class NavDrawer extends StatelessWidget {
                 width: 15,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, "/baseConhecimento");
+                },
                 icon: Icon(Icons.batch_prediction),
                 color: Color.fromRGBO(109, 109, 109, 1.0),
                 iconSize: 28,
