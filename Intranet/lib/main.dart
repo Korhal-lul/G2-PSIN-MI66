@@ -32,6 +32,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'landingPage/BaseConhecimento.dart';
 import 'landingPage/CorporativeUniversity.dart';
 import 'landingPage/ListaRamais.dart';
+import 'landingPage/PlanoSaude.dart';
 
 final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
@@ -67,6 +68,7 @@ class MyApp extends StatelessWidget {
         '/baseConhecimento': (context) => BaseConhecimento(),
         '/listaRamais': (context) => ListaRamais(),
         '/weeklyMenu': (context) => WeeklyMenu(),
+        '/planoSaude': (context) => PlanoSaude(),
         '/FolhaDePagamento': (context) => FolhaDePagamento(),
         '/Aniversariantes': (context) => Aniversariantes(),
         '/SharedServices': (context) => SharedServices(),
@@ -182,9 +184,6 @@ class ListaRamais extends StatelessWidget {
   }
 }
 
-class CListaRamaisPage {
-}
-
 class BaseConhecimento extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -218,6 +217,26 @@ class FolhaDePagamento extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                 child: FolhaDePagamentoPage(),
+              )
+            ],
+          ),
+        ));
+  }
+}
+
+class PlanoSaude extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        drawer: NavDrawer(),
+        backgroundColor: Color.fromRGBO(18, 18, 18, 1),
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Navbar(),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                child: PlanoSaudePage(),
               )
             ],
           ),

@@ -232,7 +232,10 @@ class NavDrawer extends StatelessWidget {
                 width: 15,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, "/planoSaude");
+                },
                 icon: Icon(Icons.local_hospital_outlined),
                 color: Color.fromRGBO(109, 109, 109, 1.0),
                 iconSize: 28,
