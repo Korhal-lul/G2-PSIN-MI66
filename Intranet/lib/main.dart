@@ -30,6 +30,7 @@ import 'package:flutter_webpage/navbar/Navbar.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import 'landingPage/BaseConhecimento.dart';
+import 'landingPage/BiCorporative.dart';
 import 'landingPage/CorporativeUniversity.dart';
 import 'landingPage/ListaRamais.dart';
 import 'landingPage/PlanoSaude.dart';
@@ -66,6 +67,7 @@ class MyApp extends StatelessWidget {
         '/corporativeEmail': (context) => CorporativeEmail(),
         '/corporativeUniversity': (context) => CorporativeUniversity(),
         '/baseConhecimento': (context) => BaseConhecimento(),
+        '/biCorporative': (context) => BiCorporative(),
         '/listaRamais': (context) => ListaRamais(),
         '/weeklyMenu': (context) => WeeklyMenu(),
         '/planoSaude': (context) => PlanoSaude(),
@@ -137,6 +139,26 @@ class WeeklyMenu extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                 child: WeeklyMenuPage(),
+              )
+            ],
+          ),
+        ));
+  }
+}
+
+class BiCorporative extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        drawer: NavDrawer(),
+        backgroundColor: Color.fromRGBO(18, 18, 18, 1),
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Navbar(),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                child: BiCorporativePage(),
               )
             ],
           ),
