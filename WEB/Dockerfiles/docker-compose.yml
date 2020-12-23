@@ -1,0 +1,37 @@
+version: '3'
+
+volumes:
+  db_data: {}
+
+services:
+  db:
+    build:
+      context: ./DB
+      dockerfile: Dockerfile
+      args:
+        - database=data_base
+        - password=5up3r_53nh4
+    image: leonardocech/grupo2db:2.0
+    container_name: server_db
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+  ftp:
+    build:
+      context: ./FTP
+      dockerfile: Dockerfile
+    image: leonardocech/grupo2ftp:2.0
+    container_name: server_ftp
+    ports:
+      - "20:20"
+      - "21:21"
+  web:
+    build:
+      context: ./WEB
+      dockerfile: ./Intranet/Dockerfile
+    image: leonardocech/grupo2web:2.0
+    container_name: server_web
+    ports:
+      - "1200:80"
+  
