@@ -78,7 +78,7 @@ class LandingPage extends StatelessWidget {
                 children: <Widget>[
                   new Flexible(
                       child: Container(
-                        width: 813,
+                    width: 813,
                     height: 162,
                     child: AspectRatio(
                         aspectRatio: 1.23,
@@ -86,8 +86,8 @@ class LandingPage extends StatelessWidget {
                           children: <Widget>[
                             Container(
                               width: 220,
-                              child: Image.asset(
-                                  '../assets/images/DuplaDinamica.jpg'),
+                              child: Image.network(
+                                  'https://media.discordapp.net/attachments/740538905027280960/791065608430944276/DuplaDinamica.jpg'),
                             ),
                             Container(
                                 width: 593,
@@ -298,7 +298,7 @@ class LandingPage extends StatelessWidget {
                 children: <Widget>[
                   new Flexible(
                       child: Container(
-                        width: 863,
+                    width: 863,
                     height: 150,
                     child: AspectRatio(
                         aspectRatio: 1.23,
@@ -306,8 +306,8 @@ class LandingPage extends StatelessWidget {
                           children: <Widget>[
                             Container(
                               width: 200,
-                              child: Image.asset(
-                                  '../assets/images/DuplaDinamica.jpg'),
+                              child: Image.network(
+                                  'https://media.discordapp.net/attachments/740538905027280960/791065608430944276/DuplaDinamica.jpg'),
                             ),
                             Container(
                                 width: 282,
@@ -380,7 +380,7 @@ class LandingPage extends StatelessWidget {
                         child: Row(
                           children: <Widget>[
                             SizedBox(
-                              width: width / 20 ,
+                              width: width / 20,
                             ),
                             Icon(
                               Icons.alarm,
