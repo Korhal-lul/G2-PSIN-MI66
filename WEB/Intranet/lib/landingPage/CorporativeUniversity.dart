@@ -36,7 +36,8 @@ class CorporativeUniversityPage extends StatelessWidget {
           children: <Widget>[
             Container(
               width: 1298,
-              child: Image.asset('../assets/images/CorporativeUniversity.png'),
+              child: Image.network(
+                  'https://media.discordapp.net/attachments/791121386298146857/791121475091824690/CorporativeUniversity.png'),
             ),
           ],
         ),

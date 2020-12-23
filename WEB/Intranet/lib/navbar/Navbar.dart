@@ -39,6 +39,7 @@ class Navbar extends StatelessWidget {
     );
   }
 }
+
 //Navbar para versão desktop
 class DesktopNavbar extends StatelessWidget {
   @override
@@ -64,7 +65,8 @@ class DesktopNavbar extends StatelessWidget {
                   Navigator.pop(context);
                   Navigator.pushNamed(context, "/");
                 },
-                icon: new Image.asset('../assets/images/icon.png'),
+                icon: new Image.network(
+                    'https://media.discordapp.net/attachments/791121386298146857/791121486856978442/icon.png'),
                 iconSize: 36,
               ),
               Text(
@@ -139,7 +141,8 @@ class MobileNavbar extends StatelessWidget {
                 width: 100,
               ),
               IconButton(
-                icon: new Image.asset('../assets/images/icon.png'),
+                icon: new Image.network(
+                    'https://media.discordapp.net/attachments/791121386298146857/791121486856978442/icon.png'),
                 iconSize: 36,
               ),
               Text(

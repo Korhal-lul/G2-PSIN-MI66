@@ -22,9 +22,19 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+//import 'package:ftpconnect/ftpConnect.dart';
 import 'package:file_picker/file_picker.dart';
 
 class SharedServicesPage extends StatelessWidget {
+  //final ipController = TextEditingController();
+  //final userController = TextEditingController();
+  //final pwdController = TextEditingController();
+  //final pathController = TextEditingController();
+  //String user, ip, password;
+  //FTPConnect _ftpConnect;
+  //List<int> _selectedFile;
+  //Uint8List _bytesData;
+
   List<Widget> pageChildren(double width, context) {
     return <Widget>[
       Column(
@@ -138,7 +148,7 @@ class SharedServicesPage extends StatelessWidget {
               ),
               new Expanded(
                 child: new TextField(
-                  // controller: userController,
+                  //controller: userController,
                   decoration:
                       new InputDecoration(labelText: 'USER', hintText: 'ADMIN'),
                 ),
@@ -178,8 +188,7 @@ class SharedServicesPage extends StatelessWidget {
   //Pega o arquivo e envia para o ftp
   _upload(File file) async {
     //FTPConnect ftpClient = FTPConnect (ip, user: user, pass: password);
-    //FTPConnect ftpClient =
-        //FTPConnect("3.82.63.150", user: "anonymous", pass: "guest", port: 21);
+    //FTPConnect ftpClient = FTPConnect ("3.82.63.150", user: "anonymous", pass: "guest", port: 21);
 
     try {
       // Connect to FTP Server
@@ -187,11 +196,11 @@ class SharedServicesPage extends StatelessWidget {
       //await ftpClient.connect();
       // Upload File
       print("Upload File");
-     // await ftpClient.uploadFile(file);
+      //await ftpClient.uploadFile(file);
     } finally {
       // Disconnect
       print("Disconnect");
-     // await ftpClient.disconnect();
+      //await ftpClient.disconnect();
     }
   }
 }

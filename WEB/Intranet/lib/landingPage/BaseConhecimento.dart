@@ -36,7 +36,8 @@ class BaseConhecimentoPage extends StatelessWidget {
           children: <Widget>[
             Container(
               width: 1437,
-              child: Image.asset('../assets/images/BaseConhecimento.png'),
+              child: Image.network(
+                  'https://media.discordapp.net/attachments/791121386298146857/791121467106525284/BaseConhecimento.png'),
             ),
           ],
         ),

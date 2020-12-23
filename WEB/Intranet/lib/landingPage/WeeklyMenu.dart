@@ -36,7 +36,8 @@ class WeeklyMenuPage extends StatelessWidget {
           children: <Widget>[
             Container(
               width: 1279,
-              child: Image.asset('../assets/images/Menu.png'),
+              child: Image.network(
+                  'https://media.discordapp.net/attachments/791121386298146857/791121501210017832/Menu.png'),
             ),
           ],
         ),

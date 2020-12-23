@@ -56,7 +56,8 @@ class NavDrawer extends StatelessWidget {
                   Navigator.pop(context);
                   Navigator.pushNamed(context, "/");
                 },
-                icon: new Image.asset('../assets/images/icon.png'),
+                icon: new Image.network(
+                    'https://media.discordapp.net/attachments/791121386298146857/791121486856978442/icon.png'),
                 iconSize: 36,
               ),
               Text(
@@ -236,7 +237,10 @@ class NavDrawer extends StatelessWidget {
                 width: 15,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, "/planoSaude");
+                },
                 icon: Icon(Icons.local_hospital_outlined),
                 color: Color.fromRGBO(109, 109, 109, 1.0),
                 iconSize: 28,

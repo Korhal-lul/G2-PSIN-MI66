@@ -87,7 +87,7 @@ class LandingPage extends StatelessWidget {
                             Container(
                               width: 220,
                               child: Image.network(
-                                  'https://media.discordapp.net/attachments/740538905027280960/791065608430944276/DuplaDinamica.jpg'),
+                                  'https://media.discordapp.net/attachments/791121386298146857/791121481605185536/DuplaDinamica.jpg'),
                             ),
                             Container(
                                 width: 593,
@@ -307,7 +307,7 @@ class LandingPage extends StatelessWidget {
                             Container(
                               width: 200,
                               child: Image.network(
-                                  'https://media.discordapp.net/attachments/740538905027280960/791065608430944276/DuplaDinamica.jpg'),
+                                  'https://media.discordapp.net/attachments/791121386298146857/791121481605185536/DuplaDinamica.jpg'),
                             ),
                             Container(
                                 width: 282,

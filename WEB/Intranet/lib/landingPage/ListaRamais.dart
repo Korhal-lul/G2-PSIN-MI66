@@ -36,7 +36,8 @@ class ListaRamaisPage extends StatelessWidget {
           children: <Widget>[
             Container(
               width: 1253,
-              child: Image.asset('../assets/images/ListaRamais.png'),
+              child: Image.network(
+                  'https://media.discordapp.net/attachments/791121386298146857/791121494087696384/ListaRamais.png'),
             ),
           ],
         ),
